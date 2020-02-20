@@ -7,23 +7,23 @@ var numeri = '';
 
 for (var i = 1; i <= 100; i++) {
      // console.log(i);
-     numeri = numeri + ' ' + i;
+     // numeri = numeri + ' ' + i;
      divisibilePer3 = i % 3;
      divisibilePer5 = i % 5;
      if (divisibilePer3 == 0) {
-          console.log('fizz');
-          numeri = numeri + 'fizz' + i;
+
+          numeri = numeri + ' fizz';
      }
      else if (divisibilePer5 == 0) {
-          numeri = numeri + 'buzz' + i;
+          numeri = numeri + ' buzz' ;
      }
      else if (divisibilePer3 == 0 && divisibilePer5 == 0){
-          numeri = numeri + 'fizzbuzz' + i;
+          numeri = numeri + ' fizzbuzz';
      }
      else {
-
-          document.getElementById('id').innerHTML = numeri;
+          numeri= numeri + ' ' + i;
      }
      // console.log(divisibilePer3);
      // console.log(divisibilePer5);
 }
+document.getElementById('id').innerHTML = numeri;
