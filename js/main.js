@@ -10,15 +10,14 @@ for (var i = 1; i <= 100; i++) {
      // numeri = numeri + ' ' + i;
      divisibilePer3 = i % 3;
      divisibilePer5 = i % 5;
-     if (divisibilePer3 == 0) {
-
-          numeri = numeri + ' fizz';
+     if (divisibilePer3 == 0 && divisibilePer5 == 0){
+          numeri = numeri + ' fizzbuzz';
      }
      else if (divisibilePer5 == 0) {
           numeri = numeri + ' buzz' ;
      }
-     else if (divisibilePer3 == 0 && divisibilePer5 == 0){
-          numeri = numeri + ' fizzbuzz';
+     else if (divisibilePer3 == 0) {
+          numeri = numeri + ' fizz';
      }
      else {
           numeri= numeri + ' ' + i;
