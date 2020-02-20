@@ -6,15 +6,24 @@
 var numeri = '';
 
 for (var i = 1; i <= 100; i++) {
-     console.log(i);
+     // console.log(i);
      numeri = numeri + ' ' + i;
-     // var multiplo3 = 3 * i;
-     // var multiplo5 = 5 * i;
+     divisibilePer3 = i % 3;
+     divisibilePer5 = i % 5;
+     if (divisibilePer3 == 0) {
+          console.log('fizz');
+          numeri = numeri + 'fizz' + i;
+     }
+     else if (divisibilePer5 == 0) {
+          numeri = numeri + 'buzz' + i;
+     }
+     else if (divisibilePer3 == 0 && divisibilePer5 == 0){
+          numeri = numeri + 'fizzbuzz' + i;
+     }
+     else {
 
+          document.getElementById('id').innerHTML = numeri;
+     }
+     // console.log(divisibilePer3);
+     // console.log(divisibilePer5);
 }
-
-// if (i.includes(multiplo3)) {
-//      document.getElementById('id').innerHTML = ('fizz');
-// }
-
-document.getElementById('id').innerHTML = numeri;
